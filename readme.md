@@ -1,8 +1,8 @@
 # The actions to be performed by the playbook
 
-1.	Create a Security Group (on the existing VPC) which only allows access from the following: 
-        • Inbound - Your IP address (SSH, HTTP); Ansible IP address (SSH)
-        • Outbound – HTTPS & HTTP to any IP address
+1.	Create a Security Group which only allows access from the following: 
+    • Inbound - Your IP address (SSH, HTTP); Ansible IP address (SSH)
+    • Outbound – HTTPS & HTTP to any IP address
 
 2.	Launches a Linux instance from an AMI (Centos 7 - t2.micro) and assign it with the Security Group
 
@@ -15,8 +15,10 @@
 # Instructions for running the playbook
 
 1.  Add a dedicated user for Ansible :
+    ```
     sudo adduser ansible
-
+    ```
+    
 2.  Set a password for the user :
     sudo passwd ansible
 
@@ -30,7 +32,7 @@
     sudo yum install -y python-pip wget
     sudo pip install boto boto3
 
-6.  Create the encrypted key file that will contain the keys to aws :
+6.  Create encrypted file that will contain the keys to aws and the ec2 region :
     ansible-vault create aws_keys.yml
 
     Enter the following values ​​(enter your keys):

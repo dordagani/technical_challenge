@@ -55,7 +55,7 @@
           - proto: tcp
             from_port: 22
             to_port: 22
-            cidr_ip: 52.90.222.163/32
+            cidr_ip: 52.47.33.131/32
           - proto: tcp
             from_port: 22
             to_port: 22

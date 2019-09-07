@@ -1,4 +1,4 @@
-# The actions to be performed by the playbook
+## The purpose of the playbook:
 
 1.	Create a Security Group which only allows access from the following: 
     
@@ -14,7 +14,7 @@
 
 5.	Present a web-page that is showing the IP address of the local IP address of machine on which it is running and have the web-app to listen on port 80
 
-# Instructions for running the playbook
+## Instructions for running the playbook
 
 1.  Add a dedicated user for Ansible :
     ```

@@ -1,4 +1,4 @@
-## The purpose of the playbook:
+## The purpose of the playbook
 
 1.	Create a Security Group which only allows access from the following: 
     

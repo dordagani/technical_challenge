@@ -3,7 +3,7 @@
 1.	Create a Security Group which only allows access from the following: 
     
     • Inbound - Your IP address (SSH, HTTP); Ansible IP address (SSH)
-    
+
     • Outbound – HTTPS & HTTP to any IP address
 
 2.	Launches a Linux instance from an AMI (Centos 7 - t2.micro) and assign it with the Security Group
@@ -64,5 +64,5 @@
     ansible-playbook --ask-vault-pass instance_prov.yaml
     ```
 
-    ##### I'm available for any question,
-    ##### Dor :)
+    #### I'm available for any question,
+    #### Dor :)

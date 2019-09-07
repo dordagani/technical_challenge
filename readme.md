@@ -36,9 +36,9 @@
     $ sudo su - ansible
     ```
 
-5.  Install git, python, boto and boto3 :
+5.  Install wget, python, boto and boto3 :
     ```
-    $ sudo yum install -y python-pip git
+    $ sudo yum install -y python-pip wget
     $ sudo pip install boto boto3
     ```
 
@@ -54,14 +54,14 @@
     AWS_REGION: us-east-1
     ```
 
-7.  Download the playbook from github using "git clone":
+7.  Download the playbook from github using wget:
     ```
-    git clone https://github.com/dordagani/technical_challenge
+    https://raw.githubusercontent.com/dordagani/technical_challenge/master/instance_prov.yaml
     ```
 
 8.  Run the playbook with the following command :
     ```
-    ansible-playbook --ask-vault-pass technical_challenge/instance_prov.yaml
+    ansible-playbook --ask-vault-pass instance_prov.yaml
     ```
 
     #### I'm available for any question,

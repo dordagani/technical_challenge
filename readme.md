@@ -56,7 +56,7 @@
 
 7.  Download the playbook from github using wget:
     ```
-    https://raw.githubusercontent.com/dordagani/technical_challenge/master/instance_prov.yaml
+    wget https://raw.githubusercontent.com/dordagani/technical_challenge/master/instance_prov.yaml
     ```
 
 8.  Run the playbook with the following command :

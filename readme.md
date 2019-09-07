@@ -16,6 +16,8 @@
 
 ## Instructions for running the playbook
 
+    Note: Ansible must be pre-installed on the server !
+
 1.  Add a dedicated user for Ansible :
     ```
     $ sudo adduser ansible

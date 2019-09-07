@@ -26,7 +26,7 @@
     $ sudo passwd ansible
     ```
 
-3.  Add sudo privileges to the user:
+3.  Add sudo privileges to the user :
     ```
     $ sudo usermod -aG wheel ansible
     ```
@@ -42,24 +42,24 @@
     $ sudo pip install boto boto3
     ```
 
-6.  Create encrypted file that will contain the keys to aws and the ec2 region :
+6.  Create encrypted file that will contain the keys to AWS and the ec2 region :
     ```
     $ ansible-vault create aws_keys.yml
     ```
 
-    Enter the following values ​​(enter your keys):
+    Enter the following values ​​(enter your keys) :
     ```
     AWS_ACCESS_KEY_ID: <your_aws_access_key_id>
     AWS_SECRET_ACCESS_KEY: <your_aws_secret_access_key>
     AWS_REGION: us-east-1
     ```
 
-7.  Download the playbook from github using wget:
+7.  Download the playbook from github using wget :
     ```
     wget https://github.com/dordagani/technical_challenge/blob/master/instance_prov.yaml
     ```
 
-8.  Run the playbook with the following command:
+8.  Run the playbook with the following command :
     ```
     ansible-playbook --ask-vault-pass instance_prov.yaml
     ```

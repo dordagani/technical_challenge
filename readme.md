@@ -6,7 +6,7 @@
 
     • Outbound – HTTPS & HTTP to any IP address
 
-2.	Launches a Linux instance from an AMI (Centos 7 - t2.micro) and assign it with the Security Group
+2.	Launch a Linux instance from an AMI (Centos 7 - t2.micro) and assign it with the Security Group
 
 3.	Add a tag EnvName with the value “Test Environment”
 

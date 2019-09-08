@@ -165,7 +165,7 @@
          $ip_server = $_SERVER['SERVER_ADDR']; 
   
          // Printing the stored address 
-         echo "Server private IP Address is: $ip_server :)"; 
+         echo "The private IP address is: $ip_server :)"; 
   
          ?>
         owner: apache

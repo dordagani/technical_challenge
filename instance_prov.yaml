@@ -17,7 +17,6 @@
     - name: Get public IP of Client 
       shell: w -h | awk '{print $3}'
       register: client_public_ip
-    - debug: msg={{ client_public_ip.stdout }}
     
     - name: Create new EBS Volume
       ec2_vol:

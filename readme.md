@@ -44,12 +44,12 @@
     $ sudo pip install boto boto3
     ```
 
-6.  Create encrypted file that will contain the keys to AWS and the ec2 region :
+6.  Create encrypted file that will contain the access keys to AWS and the ec2 region :
     ```
     $ ansible-vault create aws_keys.yml
     ```
 
-    Enter the following values ​​(enter your keys) :
+    Enter the following values ​​(enter your access keys) :
     ```
     AWS_ACCESS_KEY_ID: <your_aws_access_key_id>
     AWS_SECRET_ACCESS_KEY: <your_aws_secret_access_key>

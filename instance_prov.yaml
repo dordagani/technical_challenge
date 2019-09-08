@@ -11,10 +11,10 @@
     AWS_ZONE: us-east-1d
     security_group: webservers_sg
   tasks:
-    - name: Get public ip address of Ansible server
+    - name: Get public IP of Ansible server
       ipify_facts: api_url=http://api.ipify.org
 
-    - name: Get public ip address of Client 
+    - name: Get public IP of Client 
       shell: w -h | awk '{print $3}'
       register: client_public_ip
     - debug: msg={{ client_public_ip.stdout }}

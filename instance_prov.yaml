@@ -72,11 +72,11 @@
             to_port: 80
             cidr_ip: "{{ client_public_ip.stdout }}/32"
         rules_egress:
-          - proto: tcp
+          - proto: tcp #Allow HTTP to any IP address
             from_port: 80
             to_port: 80
             cidr_ip: 0.0.0.0/0
-          - proto: tcp
+          - proto: tcp #Allow HTTPS to any IP address
             from_port: 443
             to_port: 443
             cidr_ip: 0.0.0.0/0

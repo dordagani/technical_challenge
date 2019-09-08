@@ -11,6 +11,9 @@
     AWS_ZONE: us-east-1d
     security_group: webservers_sg
   tasks:
+    - name: get my public IP
+      ipify_facts: api_url=http://api.ipify.org
+    
     - name: Create new EBS Volume
       ec2_vol:
         aws_access_key: "{{ AWS_ACCESS_KEY_ID }}"
@@ -24,7 +27,7 @@
 
     - name: Create .ssh folder
       file:
-        path: ~ansible/.ssh
+        path: /home/ansible/.ssh
         state: directory
         owner: ansible
         group: ansible
@@ -35,7 +38,7 @@
         path: /home/ansible/.ssh/id_rsa
         owner: ansible
         group: ansible
-
+    
     - name: Create AWS key pair using Ansible's key.
       ec2_key:
         aws_access_key: "{{ AWS_ACCESS_KEY_ID }}"
@@ -52,15 +55,15 @@
         aws_access_key: "{{ AWS_ACCESS_KEY_ID }}"
         aws_secret_key: "{{ AWS_SECRET_ACCESS_KEY }}"
         rules:
-          - proto: tcp
+          - proto: tcp #Allow SSH from Ansible Server
             from_port: 22
             to_port: 22
-            cidr_ip: 52.47.33.131/32
-          - proto: tcp
+            cidr_ip: "{{ ipify_public_ip }}/32"
+          - proto: tcp #Allow SSH from Client Public IP
             from_port: 22
             to_port: 22
             cidr_ip: 5.29.119.109/32
-          - proto: tcp
+          - proto: tcp #Allow HTTP from Client Public IP
             from_port: 80
             to_port: 80
             cidr_ip: 5.29.119.109/32
@@ -169,6 +172,3 @@
       service: name=httpd enabled=yes  
     - name: start apache
       service: name=httpd state=started
-
-
-
